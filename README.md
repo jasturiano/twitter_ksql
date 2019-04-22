@@ -7,8 +7,13 @@ In this demo, tweets are going to be analyzed using Confluent Platform, speciall
 1. Download and Install Confluent Platform 
 https://www.confluent.io/download/
 
-2. Once Confluent platform is up and running, clone the Twitter connector from git repo or Confluence Hub, then 
-  Edit ```etc/schema-registry/connect-avro-distributed.properties```, adding to it:
+2. Once Confluent platform is up and running, clone the Twitter connector from git repo or Confluence Hub, then compile the package using maven 
+```cd kafka-connect-twitter
+mvn clean package
+cd target
+tar -xvf kafka-connect-twitter-0.2-SNAPSHOT.tar.gz```
+
+ Now Edit  ```etc/schema-registry/connect-avro-distributed.properties```, adding to it:
   ```plugin.path=share/java,/PATH/kafka-connect-twitter/``` Restart Confluent
   
 3. Create properties file with the proper twitter app credentials.
