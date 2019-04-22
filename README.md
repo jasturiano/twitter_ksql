@@ -1,6 +1,6 @@
 # Analsys Data from Twitter using KSQL
 
-In this demo, tweets we're going to be analyzed using Confluent Platform, specially KSQL to create streams and aggregations ( based on rmoff's KSQL example https://www.confluent.io/blog/using-ksql-to-analyse-query-and-transform-data-in-kafka )
+In this demo, tweets are going to be analyzed using Confluent Platform, specially KSQL to create streams and aggregations ( based on rmoff's KSQL example https://www.confluent.io/blog/using-ksql-to-analyse-query-and-transform-data-in-kafka )
 
 # Instructions:
 
