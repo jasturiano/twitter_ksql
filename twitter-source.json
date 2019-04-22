@@ -1,0 +1,18 @@
+
+ "name": "twitter-source",
+ "config": {
+   "connector.class": "com.github.jcustenborder.kafka.connect.twitter.TwitterSourceConnector",
+   "twitter.oauth.accessToken": "xxxx",
+   "twitter.oauth.consumerSecret": "xxxx",
+   "twitter.oauth.consumerKey": "xxxx",
+   "twitter.oauth.accessTokenSecret": "xxxx",
+   "kafka.delete.topic": "twitter_deletes_source",
+   "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+   "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+   "value.converter.schemas.enable": false,
+   "key.converter.schemas.enable": false,
+   "kafka.status.topic": "twitter-source",
+   "process.deletes": true,
+   "filter.keywords": "#Hashtag"
+ }
+}
