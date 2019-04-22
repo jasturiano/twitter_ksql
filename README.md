@@ -12,24 +12,22 @@ https://www.confluent.io/download/
    mvn clean package
    cd target
    tar -xvf kafka-connect-twitter-0.2-SNAPSHOT.tar.gz
-```
+   ```
 
  Now Edit  
- ```etc/schema-registry/connect-avro-distributed.properties
- ``` 
+ ```etc/schema-registry/connect-avro-distributed.properties``` 
+ 
  Adding to it:
-  ```plugin.path=share/java,/PATH/kafka-connect-twitter/
-  ``` 
-  Restart Confluent
+  ```plugin.path=share/java,/PATH/kafka-connect-twitter/``` 
+ 
+ Restart Confluent
   
 3. Create properties file with the proper twitter app credentials.
 
 4. Load the connector
-```confluent load twitter-source -d twitter-source.json
-```
+```confluent load twitter-source -d twitter-source.json```
 
 5. Check the kafka consumer
 
-```kafka-console-consumer --bootstrap-server localhost:9092 --from-beginning --topic twitter-source | jq
-```
+```kafka-console-consumer --bootstrap-server localhost:9092 --from-beginning --topic twitter-source | jq```
   
